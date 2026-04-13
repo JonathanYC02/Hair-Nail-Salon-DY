@@ -1,41 +1,51 @@
+/* =========================================================
+   RESET / GLOBAL
+========================================================= */
+
+* {
+    scroll-behavior: smooth;
+}
 
 section {
     padding: 70px 0;
 }
-* {
-    scroll-behavior: smooth;
+
+body {
+    overflow-x: hidden;
 }
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 img {
     transition: 0.3s;
 }
 
 img:hover {
     transform: scale(1.03);
-}   
-.row {
-    margin-left: 0;
-    margin-right: 0;
 }
+
+
 /* =========================================================
-   HERO SECTION (SECCIÓN PRINCIPAL)
+   HERO SECTION
 ========================================================= */
 
-/* Contenedor principal del hero */
 .hero {
-    /* Imagen de fondo */
     background-image: url('img/fondo.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: auto;
 }
+
 @media (max-width: 768px) {
-    .hero{
+    .hero {
         height: 800px;
     }
 }
 
-/* Fondo decorativo rosado */
 .fondo-rosado {
     width: 300px;
     height: 550px;
@@ -45,27 +55,46 @@ img:hover {
     background-position: 40%;
 }
 
-/* Título principal */
+
+/* =========================================================
+   TEXTOS GENERALES (UNIFICADO)
+========================================================= */
+
 .titulo {
-    font-size: 180px;
-    font-weight: bold;
     font-family: "Dancing Script", cursive;
-    color: #000000;
-    transition: 2s;
-    margin-bottom: 3;
-    line-height: 0.8;
+    font-weight: 700;
+    font-size: 2rem; /* valor base */
+    color: #2c2c2c;
     margin-top: 2rem;
+    margin-bottom: 20px;
+    line-height: 0.8;
 }
 
-/* Subtítulo */
 .subtitulo {
-    font-size: 2rem;
-    transition: 2s;
+    font-size: 1.7rem;
+    color: #b86a75;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     margin-top: -10px;
-    display: block;
 }
 
-/* Botón principal */
+.descripcion {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+.profesion {
+    color: #888;
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   BOTONES
+========================================================= */
+
 .btn-reserva {
     background-color: #702351e5;
     color: white;
@@ -73,79 +102,76 @@ img:hover {
     font-weight: bold;
     text-decoration: none;
     display: inline-block;
-    transition: 2s;
     border-radius: 20px;
+    transition: 0.3s;
 }
 
 .btn-reserva:hover {
-    background-color: #d7754b;
+    background-color: #944e58;
 }
 
+.btn-rosa {
+    background: linear-gradient(135deg, #ff7aa2, #ff4d88);
+    color: white;
+    border-radius: 30px;
+    padding: 10px 25px;
+    border: none;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.btn-rosa:hover {
+    background: linear-gradient(135deg, #ff4d88, #e6005c);
+    transform: translateY(-3px);
+}
+
+
 /* =========================================================
-   NAVBAR (BARRA DE NAVEGACIÓN)
+   NAVBAR
 ========================================================= */
 
-/* Fondo del navbar */
 .navbar {
     background-color: #f0eaee;
 }
 
-/* Logo simple */
-.logo {
-    font-family: 'Dancing Script', cursive;
-    font-size: 3rem;
-    margin: 0;
-}
-
-/* Links del menú */
 .nav-link {
     font-family: 'Roboto Mono', monospace;
     font-size: 1.2rem;
     font-weight: bold;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin: 0 15px;
 }
 
-/* Hover links */
 .nav-link:hover {
     background-color: #efb6d0c7;
 }
 
 
 /* =========================================================
-   LOGO PERSONALIZADO (NAIL SALON DY)
+   LOGO
 ========================================================= */
 
 .logo-container {
     display: flex;
     align-items: baseline;
     text-decoration: none;
-    position: relative;
     color: inherit;
     margin-right: 1rem;
 }
 
-/* Texto principal */
 .logo-text-main {
     font-family: 'Dancing Script', cursive;
     font-size: 2.2rem;
-    font-weight: 500;
-    line-height: 1;
 }
 
-/* Texto pequeño DY */
 .logo-text-dy {
-    font-family: Arial, sans-serif;
     font-size: 0.9rem;
     font-weight: bold;
     color: #444;
     position: relative;
     top: -1.2rem;
     margin-left: 0.3rem;
-    line-height: 1;
 }
 
-/* Responsive logo */
 @media (max-width: 768px) {
     .logo-text-main {
         font-size: 1.8rem;
@@ -156,7 +182,6 @@ img:hover {
         top: -1rem;
     }
 }
-
 
 /* =========================================================
    REDES SOCIALES
@@ -203,34 +228,129 @@ img:hover {
    TARJETAS / SERVICIOS
 ========================================================= */
 
+/* Base card */
 .card {
     border: none;
-    transition: transform 0.3s;
+    border-radius: 20px;
+    background: #ffffff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
+/* Hover */
 .card:hover {
-    transform: scale(1.05);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
 
-/* Botones */
-.btn-primary {
-    background-color: #e83e8c;
-    border: none;
+/* Imagen */
+.card img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: block;
+    background: #939393;
+    padding: auto; /* ⚠️ ESTE NO HACE NADA */
 }
 
-.btn-primary:hover {
-    background-color: #d63384;
+/* Contenido */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
+/* Título */
+.card h5 {
+    font-weight: 600;
+    color: #000;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: none;
+}
 
+/* Descripción */
+.card p {
+    color: #555;
+    font-size: 0.9rem;
+    flex-grow: 1;
+    margin-bottom: 10px;
+}
+
+/* Precio */
+.card h6 {
+    color: #ad4b4b;
+    font-weight: bold;
+    margin-top: auto;
+    font-size: 1.2rem;
+}
+
+/* Fondo sección */
+#servicios {
+    background: #fffdf263;
+    border: 1px solid #944e58;
+}
 /* =========================================================
    GALERÍA
 ========================================================= */
+
+#galeria {
+    background: #fff5f7;
+}
 
 #galeria img {
     margin-bottom: 15px;
 }
 
+/* Grid */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 150px;
+    gap: 10px;
+}
+
+/* Items */
+.galeria-grid .item {
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+/* Imágenes */
+.galeria-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+/* Hover */
+.galeria-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Variaciones */
+.grande {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.alta {
+    grid-row: span 2;
+}
+
+.ancho {
+    grid-column: span 2;
+}
 
 /* =========================================================
    FOOTER
@@ -241,7 +361,7 @@ footer {
 }
 
 /* =========================================================
-   SECCIÓN DUEÑA - DISEÑO PREMIUM
+   SECCIÓN DUEÑA
 ========================================================= */
 
 .duena {
@@ -249,7 +369,6 @@ footer {
     padding: 80px 0;
 }
 
-/* ================= TARJETA CONTENEDORA ================= */
 .duena-card {
     display: inline-block;
     padding: 20px;
@@ -259,7 +378,6 @@ footer {
     position: relative;
 }
 
-/* DECORACIÓN DETRÁS */
 .duena-card::before {
     content: "";
     position: absolute;
@@ -272,13 +390,11 @@ footer {
     z-index: -1;
 }
 
-/* CONTENEDOR DE IMAGEN */
 .duena-img-wrapper {
     overflow: hidden;
     border-radius: 25px;
 }
 
-/* IMAGEN */
 .img-duena {
     width: 100%;
     max-width: 320px;
@@ -286,7 +402,6 @@ footer {
     transition: 0.4s;
 }
 
-/* EFECTO HOVER */
 .img-duena:hover {
     transform: scale(1.05);
 }
@@ -379,7 +494,6 @@ footer {
    TESTIMONIOS
 ========================================================= */
 
-
 .card-testimonio {
     background-color: white;
     border-radius: 15px;
@@ -388,6 +502,11 @@ footer {
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     transition: 0.3s;
 }
+
+.card-testimonio:hover {
+    transform: translateY(-5px);
+}
+
 .img-cliente {
     width: 100px;
     height: 100px;
@@ -396,11 +515,7 @@ footer {
     display: block;
     margin: 0 auto 15px auto;
 }
-.card-testimonio:hover {
-    transform: translateY(-5px);
-}
 
-/* Texto testimonio */
 .card-testimonio p {
     font-style: italic;
     color: #555;
@@ -427,12 +542,11 @@ footer {
     border: none;
     border-radius: 20px;
     background: #ffffff;
-    padding: 1px;
-    height: 100%;
-    transition: all 0.3s ease;
+    height: 100%;  /* Esto obliga a que todas midan lo mismo en la misma fila */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: all 0.3s ease;
 }
 
 /* 💅 EFECTO HOVER */
@@ -469,24 +583,28 @@ footer {
     font-weight: 600;
     color: #000;
     margin-top: 10px;
-    font-size: 25px;
+    font-size: 1.2rem; /* Ajustamos el tamaño para que quepa mejor */
+    
+    /* Evita que las palabras se corten feo */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: none;
 }
 
 /* 📄 DESCRIPCIÓN */
 .card p {
-     color: #555;
-    font-size: 18px;
-    flex-grow: 1;
-
-    min-height: 120px; /* 👈 AJUSTA esto */
+   color: #555;
+    font-size: 0.9rem;
+    flex-grow: 1; /* Esto empuja el precio hacia abajo para que todos los precios alineen */
+    margin-bottom: 10px;
 }
 
 /* 💰 PRECIO */
 .card h6 {
-    color: #ad4b4b; /* rosado fuerte elegante */
+    color: #ad4b4b;
     font-weight: bold;
-    margin-top: 10px;
-    font-size: 30px;
+    margin-top: auto; /* Alinea el precio al fondo de la card */
+    font-size: 1.2rem;
 }
 
 /* 🌸 FONDO SUAVE OPCIONAL */
@@ -498,7 +616,7 @@ footer {
 @media (max-width: 768px) {
     .card img {
     width: 100%;
-    max-height: 180px;
+    height: 140px;
     object-fit: cover;
     border-radius: 15px;
     }
@@ -506,15 +624,13 @@ footer {
     font-weight: 600;
     color: #000;
     margin-top: 10px;
-    font-size: 18px;
+    font-size:0.95rem;
     }
 
     .card p {
     color: #555;
-    font-size: 14px;
-    flex-grow: 1;
-
-    min-height: 100px; /* 👈 más pequeño en móvil */
+    font-size: 0.85rem;
+    min-height: auto
     }
 
     .card h6 {
@@ -581,14 +697,13 @@ footer {
 }
 
 /* =========================================================
-    INFORMACION
+   INFORMACIÓN
 ========================================================= */
-/* 🎀 SECCIÓN */
+
 #info {
     background: #fff5f7;
 }
 
-/* 💅 CARD */
 .info-card {
     background: #ffffff;
     border-radius: 20px;
@@ -598,33 +713,27 @@ footer {
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
-/* ✨ HOVER */
 .info-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
 
-/* 🎯 ICONO */
 .icono {
     font-size: 40px;
     margin-bottom: 15px;
 }
 
-/* 📝 TÍTULO */
 .info-card h5 {
     font-weight: 600;
     color: #000;
     margin-bottom: 10px;
 }
 
-/* 📄 TEXTO */
 .info-card p {
     font-size: 14px;
     color: #555;
-    margin-bottom: 5px;
 }
 
-/* ⚠️ TEXTO EXTRA */
 .info-card .extra {
     color: #d63384;
     font-weight: bold;
@@ -816,4 +925,51 @@ body {
 .container {
     padding-left: 15px;
     padding-right: 15px;
+}
+
+/* =========================================================
+   GALERÍA CLICK EXPANDIR (MÓVIL)
+========================================================= */
+
+/* Asegura que los items puedan posicionarse */
+.galeria-grid .item {
+    position: relative;
+    cursor: pointer;
+}
+
+/* CUANDO SE EXPANDE */
+.galeria-grid .item.activa {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.05);
+    z-index: 9999;
+
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Imagen expandida */
+.galeria-grid .item.activa img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Fondo oscuro */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.6);
+    z-index: 9998;
+
+    display: none;
+}
+
+.overlay.activo {
+    display: block;
 }
