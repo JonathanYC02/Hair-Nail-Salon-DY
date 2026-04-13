@@ -1,3 +1,21 @@
+
+section {
+    padding: 70px 0;
+}
+* {
+    scroll-behavior: smooth;
+}
+img {
+    transition: 0.3s;
+}
+
+img:hover {
+    transform: scale(1.03);
+}   
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
 /* =========================================================
    HERO SECTION (SECCIÓN PRINCIPAL)
 ========================================================= */
@@ -70,11 +88,6 @@
 /* Fondo del navbar */
 .navbar {
     background-color: #f0eaee;
-}
-
-/* Ajuste del contenedor */
-.container {
-    padding-left: 0;
 }
 
 /* Logo simple */
@@ -220,16 +233,6 @@
 
 
 /* =========================================================
-   FORMULARIO
-========================================================= */
-
-form input,
-form textarea {
-    border-radius: 10px;
-}
-
-
-/* =========================================================
    FOOTER
 ========================================================= */
 
@@ -365,15 +368,7 @@ footer {
     color: #555;
 }
 
-/* Botón */
-.btn-reserva {
-    background-color: #b86a75;
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    display: inline-block;
-    transition: 0.3s;
-}
+
 
 .btn-reserva:hover {
     background-color: #944e58;
@@ -387,7 +382,6 @@ footer {
 
 .card-testimonio {
     background-color: white;
-    padding: 15px;
     border-radius: 15px;
     text-align: center;
     margin-bottom: 20px;
@@ -421,12 +415,19 @@ footer {
 /* =========================================================
    CARTILLAS DE SERVICIOS
 ========================================================= */
+.card {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
 
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
 .card {
     border: none;
     border-radius: 20px;
     background: #ffffff;
-    padding: auto;
+    padding: 1px;
     height: 100%;
     transition: all 0.3s ease;
     display: flex;
@@ -451,7 +452,11 @@ footer {
     background: #939393; /* rosadito suave */
     padding: auto;
 }
-
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 /* 🧾 CONTENIDO */
 .card .card-body {
     display: flex;
@@ -469,10 +474,11 @@ footer {
 
 /* 📄 DESCRIPCIÓN */
 .card p {
-    color: #555;
-   
-    flex-grow: 1; /* 🔥 esto hace que todas queden del mismo tamaño */
+     color: #555;
     font-size: 18px;
+    flex-grow: 1;
+
+    min-height: 120px; /* 👈 AJUSTA esto */
 }
 
 /* 💰 PRECIO */
@@ -487,7 +493,7 @@ footer {
 #servicios {
     background: #fffdf263; 
     border: 1px solid #944e58;
-    padding-left: 15px;
+
 }
 @media (max-width: 768px) {
     .card img {
@@ -496,9 +502,6 @@ footer {
     object-fit: cover;
     border-radius: 15px;
     }
-    .c{
-        padding-left: 12px;
-    }
     .card h5 {
     font-weight: 600;
     color: #000;
@@ -506,10 +509,12 @@ footer {
     font-size: 18px;
     }
 
-    .card p{
+    .card p {
     color: #555;
     font-size: 14px;
-    flex-grow: 1; /* 🔥 esto hace que todas queden del mismo tamaño */
+    flex-grow: 1;
+
+    min-height: 100px; /* 👈 más pequeño en móvil */
     }
 
     .card h6 {
@@ -670,7 +675,7 @@ footer {
 /* ❌ QUITAR BORDE AZUL */
 .accordion-button:focus {
     box-shadow: none;
-}s
+}
 /* ================= SECCIÓN CONTACTO ================= */
 #contacto {
     background: #fff5f7;
@@ -808,10 +813,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ESPACIADO GENERAL EN CELULAR */
-@media (max-width: 768px) {
-    body {
-        padding-left: 20px;
-        padding-right: 15px;
-    }
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
 }
