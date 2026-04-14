@@ -294,6 +294,13 @@ img:hover {
     font-size: 1.2rem;
 }
 
+.card h7{
+    color: #969696;
+    font-weight: bold;
+
+}
+
+
 /* Fondo sección */
 #servicios {
     background: #fffdf263;
