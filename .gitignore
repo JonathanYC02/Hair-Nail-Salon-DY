@@ -1,0 +1,12 @@
+# Backups personales
+backup_local/
+
+# Configuración de VSCode
+.vscode/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
