@@ -1,3 +1,4 @@
+
 /* =========================================================
    VARIABLES
 ========================================================= */
@@ -1073,4 +1074,65 @@ footer a:hover { opacity: 0.75; color: #fff; }
     .titulo { font-size: 1.9rem; }
 
     .insta-grid { gap: 6px; }
+}
+
+/* Labels del formulario */
+.form-label-custom {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--rosa-oscuro);
+    margin-bottom: 6px;
+    margin-top: 4px;
+    letter-spacing: 0.3px;
+    text-align: left;
+}
+
+/* Ajuste para iOS: los inputs date/time tienen altura distinta */
+.form-reserva input[type="date"],
+.form-reserva input[type="time"] {
+    min-height: 46px;
+    -webkit-appearance: none;
+    appearance: none;
+    color: var(--texto);
+    font-size: 0.95rem;
+}
+
+/* Cuando están vacíos se ven raros en iOS, esto lo arregla */
+.form-reserva input[type="date"]:invalid,
+.form-reserva input[type="time"]:invalid {
+    color: var(--texto-suave);
+}
+
+/* Ajuste para que el ícono nativo del calendario/reloj se vea */
+.form-reserva input[type="date"]::-webkit-calendar-picker-indicator,
+.form-reserva input[type="time"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.6;
+}
+.form-reserva input,
+.form-reserva select {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    border: 1px solid rgba(201, 107, 138, 0.25);
+    border-radius: 12px;
+    font-family: var(--font-cuerpo);
+    font-size: 0.92rem;
+    background: #fffdfc;
+    color: var(--texto);
+    transition: all 0.3s ease;
+}
+.form-reserva input,
+.form-reserva select {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 14px;  /* ← antes era 12px */
+    border: 1px solid rgba(201, 107, 138, 0.25);
+    border-radius: 12px;
+    font-family: var(--font-cuerpo);
+    font-size: 0.92rem;
+    background: #fffdfc;
+    color: var(--texto);
+    transition: all 0.3s ease;
 }

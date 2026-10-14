@@ -717,7 +717,11 @@
                 <!-- FORMULARIO -->
                 <form class="form-reserva mt-4" id="formReserva">
                     <h5 class="mb-3">Reserva rápida</h5>
-                    <input type="text" id="nombre" placeholder="Tu nombre" required>
+
+                    <label for="nombre" class="form-label-custom">Tu nombre</label>
+                    <input type="text" id="nombre" placeholder="Ej: María López" required>
+
+                    <label for="servicio" class="form-label-custom">Servicio</label>
                     <select id="servicio" required>
                         <option value="">Elige servicio</option>
                         <option>Manicure Semipermanente</option>
@@ -733,8 +737,13 @@
                         <option>Tratamiento Capilar</option>
                         <option>Corte de Cabello</option>
                     </select>
+
+                    <label for="fecha" class="form-label-custom">Fecha</label>
                     <input type="date" id="fecha" required>
+
+                    <label for="hora" class="form-label-custom">Hora</label>
                     <input type="time" id="hora" required>
+
                     <button type="submit" class="btn-rosa w-100">
                         <i class="bi bi-whatsapp"></i> Reservar por WhatsApp
                     </button>
