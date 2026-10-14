@@ -1,52 +1,67 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salón de Uñas Glamour</title>
+    <title>Nail Salon DY | Tu Estilo, Nuestra Perfección · Durán</title>
 
-    <!-- Bootstrap CSS -->
+    <!-- SEO -->
+    <meta name="description" content="Nail Salon DY · Manicure, pedicure, soft gel, poly gel, cejas, pestañas y cabello en Durán. Reserva tu cita con Dayanna Yumisaca por WhatsApp.">
+    <meta name="keywords" content="nail salon, uñas, manicure, pedicure, soft gel, poly gel, cejas, pestañas, Durán, Ecuador">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Nail Salon DY · Tu Estilo, Nuestra Perfección">
+    <meta property="og:description" content="Manicure, pedicure, cejas, pestañas y cabello. Reserva por WhatsApp.">
+    <meta property="og:image" content="img/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_EC">
+
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Tu CSS personalizado -->
-    <link rel="stylesheet" href="estilos.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- GLightbox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
 
-        <!-- LOGO IZQUIERDA -->
-    <a class="navbar-brand logo-container" href="#inicio">
+<!-- ================= PRELOADER ================= -->
+<div class="preloader" id="preloader">
+    <div class="loader-text">DY</div>
+</div>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg sticky-top" id="navbar">
+    <div class="container">
+
+        <a class="navbar-brand logo-container" href="#inicio">
             <span class="logo-text-main">Nail Salon</span>
             <span class="logo-text-dy">DY</span>
         </a>
 
-        <!-- BOTÓN MÓVIL -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Menú">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- CONTENIDO -->
         <div class="collapse navbar-collapse justify-content-between" id="menu">
 
-            <!-- REDES SOCIALES (CENTRO) -->
-            <div class="redes mx-auto">
-                <a href="https://www.instagram.com/dayana_nailsec?igsh=MThoeTg4dWJqODFwMg%3D%3D&utm_source=qr" class="icon instagram" target="_blank"><i class="bi bi-instagram"></i></a>
-                <a href="https://www.tiktok.com/@dayiyg?is_from_webapp=1&sender_device=pc" class="icon tiktok" target="_blank"><i class="bi bi-tiktok"></i></a>
-               <a href="https://wa.me/593981981145?text=Hola%20Dayana%20%F0%9F%92%85%20quiero%20agendar%20una%20cita%20contigo" target="_blank" class="icon ws">
-    <i class="bi bi-whatsapp"></i>
-</a>
+            <div class="redes mx-auto my-3 my-lg-0">
+                <a href="https://www.instagram.com/dayana_nailsec?igsh=MThoeTg4dWJqODFwMg%3D%3D&utm_source=qr" class="icon instagram" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.tiktok.com/@dayiyg?is_from_webapp=1&sender_device=pc" class="icon tiktok" target="_blank" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=593981981145&text=Hola%20Dayannita%20%F0%9F%92%8Cdeseo%20agendar%20una%20cita%20contigo%20" class="icon ws" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
             </div>
-            <!-- MENÚ DERECHA -->
+
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
                 <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
@@ -57,34 +72,40 @@
         </div>
     </div>
 </nav>
+
 <!-- ================= HERO ================= -->
 <section id="inicio" class="hero d-flex align-items-center">
     <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-center gy-5">
 
-            <!-- IMAGEN GRANDE IZQUIERDA -->
-            <div class="col-md-6 d-flex justify-content-center">
-                <div class="fondo-rosado align-items-center"></div>
+            <div class="col-md-6 d-flex justify-content-center" data-aos="fade-right">
+                <div class="fondo-rosado"></div>
             </div>
 
-            <!-- TEXTO -->
-            <div class="col-md-6 text-center text-md-start">
-                <h1 class="titulo">Tu Estilo</h1>
-                <h2 class="subtitulo">Nuestra Perfeccion</h2>
+            <div class="col-md-6 text-center text-md-start" data-aos="fade-left">
+                <p class="hero-tag">Nail Studio · Durán</p>
+                <h1 class="hero-titulo">Tu Estilo</h1>
+                <h2 class="hero-subtitulo">Nuestra Perfección</h2>
+                <p class="hero-descripcion">
+                    Belleza integral con técnica, elegancia y productos premium.
+                    Reserva tu cita y vive una experiencia pensada para ti.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contacto" class="btn-rosa">Reserva tu cita</a>
+                    <a href="#servicios" class="btn-outline">Ver servicios</a>
+                </div>
             </div>
 
         </div>
     </div>
-  
 </section>
-<!--=============== CARTA DE PRESENTACIÓN ===================-->
+
+<!-- ================= SOBRE LA EXPERTA ================= -->
 <section class="duena py-5">
     <div class="container">
-
         <div class="row align-items-center gy-5">
 
-            <!-- IMAGEN -->
-            <div class="col-md-6 text-center">
+            <div class="col-md-6 text-center" data-aos="fade-right">
                 <div class="duena-card">
                     <div class="duena-img-wrapper">
                         <img src="img/duena.jpeg" class="img-duena" alt="Dayanna Yumisaca">
@@ -92,8 +113,7 @@
                 </div>
             </div>
 
-            <!-- TEXTO -->
-            <div class="col-md-6 text-center text-md-start">
+            <div class="col-md-6 text-center text-md-start" data-aos="fade-left">
                 <h5 class="subtitulo mb-2">Sobre la experta</h5>
                 <h2 class="titulo mb-2">Dayanna Yumisaca</h2>
                 <h6 class="profesion mb-3">Especialista en Belleza Integral</h6>
@@ -106,180 +126,280 @@
                     Mi objetivo es realzar tu belleza con resultados elegantes y personalizados, utilizando productos de alta calidad que garantizan durabilidad y un acabado impecable.
                 </p>
 
-                <a href="#contacto" class="btn btn-rosa mt-3">
-                    Agendar Cita
-                </a>
+                <a href="#contacto" class="btn-rosa mt-3">Agendar Cita</a>
             </div>
 
         </div>
-
     </div>
 </section>
-        <!-- ================= SERVICIOS ================= -->
-<section id="servicios" class="py-5">
+
+<!-- ================= ESTADÍSTICAS ================= -->
+<section class="stats">
+    <div class="container">
+        <div class="row text-center g-4">
+            <div class="col-6 col-md-3" data-aos="fade-up">
+                <div class="stat-num" data-target="500">0</div>
+                <p class="stat-label">Clientas felices</p>
+            </div>
+            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="stat-num" data-target="3">0</div>
+                <p class="stat-label">Años de experiencia</p>
+            </div>
+            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-num" data-target="15">0</div>
+                <p class="stat-label">Servicios disponibles</p>
+            </div>
+            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="stat-num static">4.9★</div>
+                <p class="stat-label">Valoración promedio</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= SERVICIOS: MANOS & PIES ================= -->
+<section id="servicios" class="py-5 servicios-section">
     <div class="container text-center">
-        <h5 class="subtitulo">Servicios & costos</h5>
-        <h2 class="titulo">Manos & Pies</h2>
-        <p class="descripcion">
-                    Disfruta de servicios profesionales de manicure y pedicure diseñados para resaltar la elegancia de tus manos y pies, con acabados duraderos y estilos personalizados.
-                </p>
-        <div class="row g-3 justify-content-center">
-            <div class="col-6 col-lg-3 d-flex align-items-stretch">
-                <div class="card shadow-sm text-center">
+        <h5 class="subtitulo" data-aos="fade-up">Servicios & costos</h5>
+        <h2 class="titulo" data-aos="fade-up" data-aos-delay="100">Manos & Pies</h2>
+        <p class="descripcion descripcion-centrada" data-aos="fade-up" data-aos-delay="200">
+            Disfruta de servicios profesionales de manicure y pedicure diseñados para resaltar la elegancia de tus manos y pies, con acabados duraderos y estilos personalizados.
+        </p>
+
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="0">
+                <div class="card">
                     <div class="card-body">
-                        <img src="img/manicure-semipermanente.jpg" class="img-fluid mb-3" style="max-width: 200px;">
+                        <img src="img/manicure-semipermanente.jpg" class="img-fluid mb-3" alt="Manicure Semipermanente" loading="lazy">
                         <h5>Manicure Semipermanente</h5>
                         <p>Limpieza profunda y esmaltado semipermanente</p>
-                        <h6> Valor: 15$</h6>
-                        <h7> Duracion: 2 a 3 semanas</h7>
-
+                        <h6>Valor: 15$</h6>
+                        <p class="duracion">Duración: 2 a 3 semanas</p>
+                        <a href="https://wa.me/593981981145?text=Hola%20Dayannita,%20quiero%20agendar%20un%20Manicure%20Semipermanente" 
+                           class="btn-card" target="_blank" rel="noopener">
+                            Reservar <i class="bi bi-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-lg-3 d-flex align-items-stretch">
-                <div class="card shadow-sm text-center">
+
+            <div class="col-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                <div class="card">
                     <div class="card-body">
-                        <img src="img/pedicura.jpeg" class="img-fluid mb-3" style="max-width: 200px;">
+                        <img src="img/pedicura.jpeg" class="img-fluid mb-3" alt="Pedicure Semipermanente" loading="lazy">
                         <h5>Pedicure Semipermanente</h5>
                         <p>Limpieza sencilla y esmaltado semipermanente</p>
-                        <h6> Valor: 15$</h6>
-                        <h7> Duracion: 2 a 3 semanas</h7>
+                        <h6>Valor: 15$</h6>
+                        <p class="duracion">Duración: 2 a 3 semanas</p>
+                        <a href="https://wa.me/593981981145?text=Hola%20Dayannita,%20quiero%20agendar%20un%20Pedicure%20Semipermanente" 
+                           class="btn-card" target="_blank" rel="noopener">
+                            Reservar <i class="bi bi-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-lg-3 d-flex align-items-stretch">
-                <div class="card shadow-sm text-center">
+
+            <div class="col-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                <div class="card">
                     <div class="card-body">
-                        <img src="img/manicura rusa.jpg" class="img-fluid mb-3" style="max-width: 200px;">
+                        <img src="img/manicura rusa.jpg" class="img-fluid mb-3" alt="Manicura Rusa" loading="lazy">
                         <h5>Manicura Rusa</h5>
-                        <p>Limpieza profunda + nivelacion con base rubber + esmaltado semipermanente</p>
-                        <h6> Valor: 15$</h6>
-                        <h7> Duracion: 2 a 3 semanas</h7>
+                        <p>Limpieza profunda + nivelación con base rubber + esmaltado semipermanente</p>
+                        <h6>Valor: 15$</h6>
+                        <p class="duracion">Duración: 2 a 3 semanas</p>
+                        <a href="https://wa.me/593981981145?text=Hola%20Dayannita,%20quiero%20agendar%20una%20Manicura%20Rusa" 
+                           class="btn-card" target="_blank" rel="noopener">
+                            Reservar <i class="bi bi-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-lg-3 d-flex align-items-stretch">
-                <div class="card shadow-sm text-center">
+
+            <div class="col-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                <div class="card">
                     <div class="card-body">
-                        <img src="img/manicura caballero.jpg" class="img-fluid mb-3" style="max-width: 200px;">
+                        <img src="img/manicura caballero.jpg" class="img-fluid mb-3" alt="Manicura Caballero" loading="lazy">
                         <h5>Manicura Caballero</h5>
                         <p>Limpieza profunda + esmaltado para el fortalecimiento de la uña</p>
-                        <h6> Valor: 10$</h6>
-                        <h7> Duracion: 2 a 3 semanas</h7>
+                        <h6>Valor: 10$</h6>
+                        <p class="duracion">Duración: 2 a 3 semanas</p>
+                        <a href="https://wa.me/593981981145?text=Hola%20Dayannita,%20quiero%20agendar%20una%20Manicura%20Caballero" 
+                           class="btn-card" target="_blank" rel="noopener">
+                            Reservar <i class="bi bi-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-lg-3 d-flex align-items-stretch">
-                <div class="card shadow-sm text-center">
+
+            <div class="col-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="0">
+                <div class="card">
                     <div class="card-body">
-                        <img src="img/soft gel.jpg" class="img-fluid mb-3" style="max-width: 200px;">
+                        <img src="img/soft gel.jpg" class="img-fluid mb-3" alt="Soft Gel" loading="lazy">
                         <h5>Soft Gel</h5>
-                        <p>Se utiliza tips fabricados con gel que cubre por completo la uña. Nivelamos y realizamos el esmaltado dandole un aspecto mas natural</p>
-                        <h6> Valor: 25$</h6>
-                        <h7> Duracion: 3 a 4 semanas</h7>
+                        <p>Tips fabricados con gel que cubren la uña. Nivelamos y esmaltamos para un aspecto natural.</p>
+                        <h6>Valor: 25$</h6>
+                        <p class="duracion">Duración: 3 a 4 semanas</p>
+                        <a href="https://wa.me/593981981145?text=Hola%20Dayannita,%20quiero%20agendar%20un%20Soft%20Gel" 
+                           class="btn-card" target="_blank" rel="noopener">
+                            Reservar <i class="bi bi-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-lg-3 d-flex align-items-stretch">
-                <div class="card shadow-sm text-center">
+
+            <div class="col-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                <div class="card">
                     <div class="card-body">
-                        <img src="img/poly gel.jpg" class="img-fluid mb-3" style="max-width: 200px;">
+                        <img src="img/poly gel.jpg" class="img-fluid mb-3" alt="Poly Gel" loading="lazy">
                         <h5>Poly Gel</h5>
-                        <p>Es una combinacion innovadora entre las uñas acrilicas y el gel tradicional.</p>
-                        <h6> Valor: 25$</h6>
-                        <h7> Duracion: 3 a 4 semanas</h7>
+                        <p>Combinación innovadora entre las uñas acrílicas y el gel tradicional.</p>
+                        <h6>Valor: 25$</h6>
+                        <p class="duracion">Duración: 3 a 4 semanas</p>
+                        <a href="https://wa.me/593981981145?text=Hola%20Dayannita,%20quiero%20agendar%20un%20Poly%20Gel" 
+                           class="btn-card" target="_blank" rel="noopener">
+                            Reservar <i class="bi bi-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-lg-3 d-flex align-items-stretch">
-                <div class="card shadow-sm text-center justify-content-center">
+
+            <div class="col-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                <div class="card">
                     <div class="card-body">
-                        <img src="img/recubrimiento gel.jpg" class="img-fluid mb-3" style="max-width: 200px;">
-                        <h5>Recubrimiento Con Gel</h5>
-                        <p>Limpieza profunda + Recubrimiento en gel + diseño a elegir</p>
-                        <h6> Valor: 20$</h6>
-                        <h7> Duracion: 3 a 4 semanas</h7>
+                        <img src="img/recubrimiento gel.jpg" class="img-fluid mb-3" alt="Recubrimiento con Gel" loading="lazy">
+                        <h5>Recubrimiento con Gel</h5>
+                        <p>Limpieza profunda + recubrimiento en gel + diseño a elegir</p>
+                        <h6>Valor: 20$</h6>
+                        <p class="duracion">Duración: 3 a 4 semanas</p>
+                        <a href="https://wa.me/593981981145?text=Hola%20Dayannita,%20quiero%20agendar%20un%20Recubrimiento%20con%20Gel" 
+                           class="btn-card" target="_blank" rel="noopener">
+                            Reservar <i class="bi bi-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
             </div>
+
+            <div class="col-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="img/recubrimiento gel.jpg" class="img-fluid mb-3" alt="Retiro de material" loading="lazy">
+                        <h5>Retiro de Material</h5>
+                        <p>Acrílico o Softgel</p>
+                        <h6>Valor: 5$</h6>
+                        <p class="duracion">Semipermanente: 3$</p>
+                        <a href="https://wa.me/593981981145?text=Hola%20Dayannita,%20quiero%20agendar%20un%20Retiro%20de%20Material" 
+                           class="btn-card" target="_blank" rel="noopener">
+                            Reservar <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
 
-<!-- ================= SERVICIOS 2 ================= -->
-
-<section id="servicios" class="py-5">
+<!-- ================= SERVICIOS: CEJAS Y PESTAÑAS ================= -->
+<section id="servicios-cejas" class="py-5 servicios-section">
     <div class="container text-center">
-        <h5 class="subtitulo">Servicios & costos</h5>
-        <h2 class="titulo">Cejas y Pestañas</h2>
-        <p class="descripcion">
-                    Trabajamos técnicas especializadas para definir, dar forma y resaltar tu mirada, logrando un efecto natural, armonioso y acorde a tu estilo.
-                </p>
-        <div class="row g-3 justify-content-center">
-           <div class="col-6 col-lg-3 d-flex align-items-stretch">
-                <div class="card shadow-sm text-center justify-content-center">
+        <h5 class="subtitulo" data-aos="fade-up">Servicios & costos</h5>
+        <h2 class="titulo" data-aos="fade-up" data-aos-delay="100">Cejas & Pestañas</h2>
+        <p class="descripcion descripcion-centrada" data-aos="fade-up" data-aos-delay="200">
+            Trabajamos técnicas especializadas para definir, dar forma y resaltar tu mirada, logrando un efecto natural, armonioso y acorde a tu estilo.
+        </p>
+
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="0">
+                <div class="card">
                     <div class="card-body">
-                        <img src="img/laminado ceja.jpeg" class="img-fluid mb-3" style="max-width: 200px;">
-                        <h5>Laminado De Cejas</h5>
-                        <p>Limpieza de cejas + Producto que ablanda vello + Peinado, moldeado y fijador</p>
-                        <h6> Valor: 10$</h6>
-                        <h7> Duracion: 4 semanas</h7>
+                        <img src="img/laminado ceja.jpeg" class="img-fluid mb-3" alt="Laminado de Cejas" loading="lazy">
+                        <h5>Laminado de Cejas</h5>
+                        <p>Limpieza + producto que ablanda el vello + peinado, moldeado y fijador</p>
+                        <h6>Valor: 10$</h6>
+                        <p class="duracion">Duración: 4 semanas</p>
+                        <a href="https://wa.me/593981981145?text=Hola%20Dayannita,%20quiero%20agendar%20un%20Laminado%20de%20Cejas" 
+                           class="btn-card" target="_blank" rel="noopener">
+                            Reservar <i class="bi bi-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-lg-3 d-flex align-items-stretch">
-                <div class="card shadow-sm text-center justify-content-center">
+
+            <div class="col-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                <div class="card">
                     <div class="card-body">
-                        <img src="img/lifting cejas.jpeg" class="img-fluid mb-3" style="max-width: 200px;">
-                        <h5>Lifting De Pestañas</h5>
-                        <p>Limpieza y preparacion + Producto para levantar y moldear vello + Aplicacion de fijador e hidratacion</p>
-                        <h6> Valor: 15$</h6>
-                        <h7> Duracion: 4 semanas</h7>
+                        <img src="img/lifting cejas.jpeg" class="img-fluid mb-3" alt="Lifting de Pestañas" loading="lazy">
+                        <h5>Lifting de Pestañas</h5>
+                        <p>Limpieza y preparación + producto para levantar y moldear + fijador e hidratación</p>
+                        <h6>Valor: 15$</h6>
+                        <p class="duracion">Duración: 4 semanas</p>
+                        <a href="https://wa.me/593981981145?text=Hola%20Dayannita,%20quiero%20agendar%20un%20Lifting%20de%20Pestañas" 
+                           class="btn-card" target="_blank" rel="noopener">
+                            Reservar <i class="bi bi-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-lg-3 d-flex align-items-stretch">
-                <div class="card shadow-sm text-center justify-content-center">
+
+            <div class="col-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                <div class="card">
                     <div class="card-body">
-                        <img src="img/Henna.jpg" class="img-fluid mb-3" style="max-width: 200px;">
+                        <img src="img/Henna.jpg" class="img-fluid mb-3" alt="Brow Henna" loading="lazy">
                         <h5>Brow Henna</h5>
-                        <p>Limpieza y diseño + Aplicacion de henna + Retiro y acabado</p>
-                        <h6> Valor: 10$</h6>
-                        <h7> Duracion: 4 semanas</h7>
+                        <p>Limpieza y diseño + aplicación de henna + retiro y acabado</p>
+                        <h6>Valor: 10$</h6>
+                        <p class="duracion">Duración: 4 semanas</p>
+                        <a href="https://wa.me/593981981145?text=Hola%20Dayannita,%20quiero%20agendar%20un%20Brow%20Henna" 
+                           class="btn-card" target="_blank" rel="noopener">
+                            Reservar <i class="bi bi-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
 
-<!-- ================= SERVICIOS 3 ================= -->
-
-<section id="servicios" class="py-5">
+<!-- ================= SERVICIOS: CABELLO ================= -->
+<section id="servicios-cabello" class="py-5 servicios-section">
     <div class="container text-center">
-        <h5 class="subtitulo">Servicios & costos</h5>
-        <h2 class="titulo">Cabello</h2>
-        <p class="descripcion">
-                    Ofrecemos tratamientos y servicios capilares enfocados en el cuidado, la salud y la belleza de tu cabello, adaptados a tu tipo y necesidad.
-                </p>
-         <div class="row g-3 justify-content-center">
-            <div class="col-6 col-lg-3 d-flex align-items-stretch">
-                <div class="card shadow-sm text-center justify-content-center">
+        <h5 class="subtitulo" data-aos="fade-up">Servicios & costos</h5>
+        <h2 class="titulo" data-aos="fade-up" data-aos-delay="100">Cabello</h2>
+        <p class="descripcion descripcion-centrada" data-aos="fade-up" data-aos-delay="200">
+            Ofrecemos tratamientos y servicios capilares enfocados en el cuidado, la salud y la belleza de tu cabello, adaptados a tu tipo y necesidad.
+        </p>
+
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
+                <div class="card">
                     <div class="card-body">
-                        <img src="img/Tratamiento capilar.jpeg" class="img-fluid mb-3" style="max-width: 200px;">
+                        <img src="img/Tratamiento capilar.jpeg" class="img-fluid mb-3" alt="Tratamiento Capilar" loading="lazy">
                         <h5>Tratamiento Capilar</h5>
-                        <p>Tratameinto reparador, Tratamiento de nutricion, Tratamiento de reconstruccion</p>
-                        <h6> Valor: desde 20$</h6>
+                        <p>Tratamiento reparador, de nutrición o de reconstrucción</p>
+                        <h6>Valor: desde 20$</h6>
+                        <a href="https://wa.me/593981981145?text=Hola%20Dayannita,%20quiero%20agendar%20un%20Tratamiento%20Capilar" 
+                           class="btn-card" target="_blank" rel="noopener">
+                            Reservar <i class="bi bi-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-lg-3 d-flex align-items-stretch">
-                <div class="card shadow-sm text-center justify-content-center">
+
+            <div class="col-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                <div class="card">
                     <div class="card-body">
-                        <img src="img/cabello.jpeg" class="img-fluid mb-3" style="max-width: 200px;">
-                        <h5>Corte De Cabello</h5>
-                        <p>Estilo + Lavado + Cepillado</p>
-                        <h6> Valor: 10$</h6>
+                        <img src="img/cabello.jpeg" class="img-fluid mb-3" alt="Corte de Cabello" loading="lazy">
+                        <h5>Corte de Cabello</h5>
+                        <p>Estilo + lavado + cepillado</p>
+                        <h6>Valor: 10$</h6>
+                        <a href="https://wa.me/593981981145?text=Hola%20Dayannita,%20quiero%20agendar%20un%20Corte%20de%20Cabello" 
+                           class="btn-card" target="_blank" rel="noopener">
+                            Reservar <i class="bi bi-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -288,87 +408,133 @@
     </div>
 </section>
 
-        <!-- TESTIMONIOS -->
-        <div class="text-center mb-4 m-5">
-            <h5 class="subtitulo m-4">Testimonios</h5>
-            <h2 class="titulo">Clientes Satisfechos</h2>
+<!-- ================= ¿POR QUÉ ELEGIRNOS? ================= -->
+<section class="beneficios py-5">
+    <div class="container text-center">
+        <h5 class="subtitulo" data-aos="fade-up">Nuestro diferencial</h5>
+        <h2 class="titulo" data-aos="fade-up" data-aos-delay="100">¿Por qué elegirnos?</h2>
+
+        <div class="row g-4 mt-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="bi bi-award"></i></div>
+                    <h5>Productos premium</h5>
+                    <p>Geles importados y materiales de alta gama para mayor duración.</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="bi bi-heart-pulse"></i></div>
+                    <h5>Bioseguridad total</h5>
+                    <p>Esterilización de herramientas y protocolos estrictos de higiene.</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="bi bi-stars"></i></div>
+                    <h5>Diseños personalizados</h5>
+                    <p>Cada set se adapta a tu estilo, ocasión y tipo de uña.</p>
+                </div>
+            </div>
         </div>
-
-        <div class="row ">
-
-           <div class="col-md-4 d-flex justify-content-center">
-                <div class="card-testimonio text-center">
-                    
-                    <img src="img/persona1.jpg" class="img-cliente">
-
-                    <p>"El mejor servicio que he recibido. Mis uñas quedaron perfectas y duraron semanas."</p>
-                    
-                    <h6>⭐ ⭐ ⭐ ⭐ ⭐</h6>
-                    <span>- María G.</span>
-
-                </div>
-            </div>
-            <div class="col-md-4 d-flex justify-content-center">
-                <div class="card-testimonio text-center">
-                     <img src="img/persona2.jpg" class="img-cliente">
-                    <p>"Excelente atención y mucha dedicación en cada detalle. 100% recomendado."</p>
-                    <h6>⭐ ⭐ ⭐ ⭐ ⭐</h6>
-                    <span>- Andrea L.</span>
-                </div>
-            </div>
-
-            <div class="col-md-4 d-flex justify-content-center">
-                <div class="card-testimonio text-center">
-                     <img src="img/persona3.jpg" class="img-cliente">
-                    <p>"Ambiente muy agradable y resultados increíbles. Volveré sin duda."</p>
-                    <h6>⭐ ⭐ ⭐ ⭐ ⭐</h6>
-                    <span>- Carla R.</span>
-                </div>
-            </div>
-
-        </div>
-
     </div>
 </section>
 
+<!-- ================= TESTIMONIOS ================= -->
+<section class="testimonios-section py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h5 class="subtitulo" data-aos="fade-up">Testimonios</h5>
+            <h2 class="titulo" data-aos="fade-up" data-aos-delay="100">Clientes Satisfechos</h2>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="0">
+                <div class="card-testimonio text-center">
+                    <img src="img/persona1.jpg" class="img-cliente" alt="María G." loading="lazy">
+                    <p>"El mejor servicio que he recibido. Mis uñas quedaron perfectas y duraron semanas."</p>
+                    <h6>★ ★ ★ ★ ★</h6>
+                    <span>— María G.</span>
+                </div>
+            </div>
+
+            <div class="col-md-4 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-testimonio text-center">
+                    <img src="img/persona2.jpg" class="img-cliente" alt="Andrea L." loading="lazy">
+                    <p>"Excelente atención y mucha dedicación en cada detalle. 100% recomendado."</p>
+                    <h6>★ ★ ★ ★ ★</h6>
+                    <span>— Andrea L.</span>
+                </div>
+            </div>
+
+            <div class="col-md-4 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-testimonio text-center">
+                    <img src="img/persona3.jpg" class="img-cliente" alt="Carla R." loading="lazy">
+                    <p>"Ambiente muy agradable y resultados increíbles. Volveré sin duda."</p>
+                    <h6>★ ★ ★ ★ ★</h6>
+                    <span>— Carla R.</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
 <!-- ================= GALERÍA ================= -->
 <section id="galeria" class="py-5">
     <div class="container text-center">
-        <h5 class="subtitulo m-4">Trabajos</h5>
-        <h2 class="titulo">Comprometidos en realzar tu belleza.</h2>
+        <h5 class="subtitulo" data-aos="fade-up">Trabajos</h5>
+        <h2 class="titulo" data-aos="fade-up" data-aos-delay="100">Comprometidos en realzar tu belleza</h2>
 
-        <div class="galeria-grid">
-
-            <div class="item grande"><img src="img/u1.jpeg"></div>
-            <div class="item"><img src="img/u2.jpeg"></div>
-            <div class="item alta"><img src="img/u3.jpeg"></div>
-            <div class="item"><img src="img/u4.jpeg"></div>
-            <div class="item ancho"><img src="img/u5.jpeg"></div>
-            <div class="item"><img src="img/u6.jpeg"></div>
-            <div class="item"><img src="img/u7.jpeg"></div>
-            <div class="item grande"><img src="img/u8.jpeg"></div>
-            <div class="item"><img src="img/u9.jpeg"></div>
-            <div class="item"><img src="img/u9.2.jpeg"></div> 
-            <div class="item alta"><img src="img/u10.jpeg"></div>
-            <div class="item alta"><img src="img/u14.jpeg"></div>
-            <div class="item grande"><img src="img/u111.jpeg"></div>
-            <div class="item ancho"><img src="img/u12.jpeg"></div>
+        <div class="galeria-grid mt-5">
+            <a href="img/u1.jpeg" class="item grande glightbox" data-aos="zoom-in" data-aos-delay="0"><img src="img/u1.jpeg" alt="Trabajo 1" loading="lazy"></a>
+            <a href="img/u2.jpeg" class="item glightbox" data-aos="zoom-in" data-aos-delay="50"><img src="img/u2.jpeg" alt="Trabajo 2" loading="lazy"></a>
+            <a href="img/u3.jpeg" class="item alta glightbox" data-aos="zoom-in" data-aos-delay="100"><img src="img/u3.jpeg" alt="Trabajo 3" loading="lazy"></a>
+            <a href="img/u4.jpeg" class="item glightbox" data-aos="zoom-in" data-aos-delay="150"><img src="img/u4.jpeg" alt="Trabajo 4" loading="lazy"></a>
+            <a href="img/u5.jpeg" class="item ancho glightbox" data-aos="zoom-in" data-aos-delay="200"><img src="img/u5.jpeg" alt="Trabajo 5" loading="lazy"></a>
+            <a href="img/u6.jpeg" class="item glightbox" data-aos="zoom-in" data-aos-delay="250"><img src="img/u6.jpeg" alt="Trabajo 6" loading="lazy"></a>
+            <a href="img/u7.jpeg" class="item glightbox" data-aos="zoom-in" data-aos-delay="300"><img src="img/u7.jpeg" alt="Trabajo 7" loading="lazy"></a>
+            <a href="img/u8.jpeg" class="item grande glightbox" data-aos="zoom-in" data-aos-delay="0"><img src="img/u8.jpeg" alt="Trabajo 8" loading="lazy"></a>
+            <a href="img/u9.jpeg" class="item glightbox" data-aos="zoom-in" data-aos-delay="50"><img src="img/u9.jpeg" alt="Trabajo 9" loading="lazy"></a>
+            <a href="img/u9.2.jpeg" class="item glightbox" data-aos="zoom-in" data-aos-delay="100"><img src="img/u9.2.jpeg" alt="Trabajo 10" loading="lazy"></a>
+            <a href="img/u10.jpeg" class="item alta glightbox" data-aos="zoom-in" data-aos-delay="150"><img src="img/u10.jpeg" alt="Trabajo 11" loading="lazy"></a>
+            <a href="img/u14.jpeg" class="item alta glightbox" data-aos="zoom-in" data-aos-delay="200"><img src="img/u14.jpeg" alt="Trabajo 12" loading="lazy"></a>
+            <a href="img/u111.jpeg" class="item grande glightbox" data-aos="zoom-in" data-aos-delay="250"><img src="img/u111.jpeg" alt="Trabajo 13" loading="lazy"></a>
+            <a href="img/u12.jpeg" class="item ancho glightbox" data-aos="zoom-in" data-aos-delay="300"><img src="img/u12.jpeg" alt="Trabajo 14" loading="lazy"></a>
         </div>
     </div>
 </section>
-<!-- 🔥 ESTO VA UNA SOLA VEZ (IMPORTANTE) -->
-<div class="overlay" id="overlay"></div>
 
-<!-- ================= POLÍTICAS / INFORMACIÓN ================= -->
+<!-- ================= INSTAGRAM FEED ================= -->
+<section class="insta-section py-5">
+    <div class="container text-center">
+        <h5 class="subtitulo" data-aos="fade-up">Sígueme</h5>
+        <h2 class="titulo" data-aos="fade-up" data-aos-delay="100">@dayana_nailsec</h2>
+
+        <div class="insta-grid mt-4">
+            <a href="https://www.instagram.com/dayana_nailsec" target="_blank" rel="noopener" class="insta-item" data-aos="zoom-in" data-aos-delay="0"><img src="img/u1.jpeg" alt="Instagram" loading="lazy"></a>
+            <a href="https://www.instagram.com/dayana_nailsec" target="_blank" rel="noopener" class="insta-item" data-aos="zoom-in" data-aos-delay="50"><img src="img/u2.jpeg" alt="Instagram" loading="lazy"></a>
+            <a href="https://www.instagram.com/dayana_nailsec" target="_blank" rel="noopener" class="insta-item" data-aos="zoom-in" data-aos-delay="100"><img src="img/u3.jpeg" alt="Instagram" loading="lazy"></a>
+            <a href="https://www.instagram.com/dayana_nailsec" target="_blank" rel="noopener" class="insta-item" data-aos="zoom-in" data-aos-delay="150"><img src="img/u4.jpeg" alt="Instagram" loading="lazy"></a>
+            <a href="https://www.instagram.com/dayana_nailsec" target="_blank" rel="noopener" class="insta-item" data-aos="zoom-in" data-aos-delay="200"><img src="img/u5.jpeg" alt="Instagram" loading="lazy"></a>
+            <a href="https://www.instagram.com/dayana_nailsec" target="_blank" rel="noopener" class="insta-item" data-aos="zoom-in" data-aos-delay="250"><img src="img/u6.jpeg" alt="Instagram" loading="lazy"></a>
+        </div>
+
+        <a href="https://www.instagram.com/dayana_nailsec" class="btn-rosa mt-4" target="_blank" rel="noopener">
+            <i class="bi bi-instagram"></i> Seguir en Instagram
+        </a>
+    </div>
+</section>
+
+<!-- ================= INFORMACIÓN IMPORTANTE ================= -->
 <section id="info" class="py-5">
     <div class="container text-center">
-        <h5 class="subtitulo mb-5">INFORMACION IMPORTANTE</h5>
+        <h5 class="subtitulo mb-5" data-aos="fade-up">Información importante</h5>
 
         <div class="row g-4">
 
-            <!-- ITEM 1 -->
-            <div class="col-12 col-md-6 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
                 <div class="info-card">
                     <div class="icono">📅</div>
                     <h5>Agendamiento de cita</h5>
@@ -376,18 +542,15 @@
                 </div>
             </div>
 
-            <!-- ITEM 2 -->
-            <div class="col-12 col-md-6 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
                 <div class="info-card">
                     <div class="icono">💰</div>
                     <h5>Pago de Reserva</h5>
                     <p>Una vez enviado el comprobante a nuestro WhatsApp la reserva queda confirmada.</p>
-                    
                 </div>
             </div>
 
-            <!-- ITEM 3 -->
-            <div class="col-12 col-md-6 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
                 <div class="info-card">
                     <div class="icono">⏰</div>
                     <h5>Puntualidad</h5>
@@ -395,8 +558,7 @@
                 </div>
             </div>
 
-            <!-- ITEM 4 -->
-            <div class="col-12 col-md-6 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
                 <div class="info-card">
                     <div class="icono">🔄</div>
                     <h5>Reprogramación</h5>
@@ -411,11 +573,10 @@
 <!-- ================= FAQ ================= -->
 <section id="faqs" class="py-5">
     <div class="container">
-        <h2 class="text-center mb-5">Preguntas Frecuentes</h2>
+        <h2 class="titulo text-center mb-5" data-aos="fade-up">Preguntas Frecuentes</h2>
 
-        <div class="accordion" id="faqAccordion">
+        <div class="accordion" id="faqAccordion" data-aos="fade-up" data-aos-delay="100">
 
-            <!-- ITEM 1 -->
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">
@@ -431,7 +592,6 @@
                 </div>
             </div>
 
-            <!-- ITEM 2 -->
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">
@@ -441,17 +601,13 @@
                 <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
                         <p>En caso de no asistir a tu cita, el anticipo no se pierde de inmediato. Este podrá mantenerse disponible hasta el día siguiente para que puedas reagendar tu turno.</p>
-
                         <p>Si dentro de ese plazo decides reprogramar, el abono seguirá siendo válido y se aplicará a tu nueva cita.</p>
-
                         <p>Sin embargo, si transcurren más de 24 horas sin realizar una reprogramación, el anticipo se considerará perdido.</p>
-
                         <p>En caso de desear agendar una nueva cita después de ese tiempo, será necesario realizar un nuevo abono para confirmar la reserva.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- ITEM 3 -->
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq3">
@@ -465,7 +621,6 @@
                 </div>
             </div>
 
-            <!-- ITEM 4 -->
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq4">
@@ -479,7 +634,6 @@
                 </div>
             </div>
 
-            <!-- ITEM 5 -->
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq5">
@@ -493,7 +647,6 @@
                 </div>
             </div>
 
-            <!-- ITEM 6 -->
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq6">
@@ -507,7 +660,6 @@
                 </div>
             </div>
 
-            <!-- ITEM 7 -->
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq7">
@@ -521,7 +673,6 @@
                 </div>
             </div>
 
-            <!-- ITEM 8 -->
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq8">
@@ -535,7 +686,6 @@
                 </div>
             </div>
 
-            <!-- ITEM 9 -->
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq9">
@@ -552,54 +702,68 @@
         </div>
     </div>
 </section>
- 
+
 <!-- ================= CONTACTO ================= -->
 <section id="contacto" class="py-5">
     <div class="container">
-        <div class="row justify-content-center text-center">
+        <div class="row justify-content-center g-4">
 
-            <!-- INFO -->
-            <div class="col-md-6 mx-auto text-center">
-                <h2 class=" subtitulo mb-4">Agenda tu cita con nosotros</h2>
+            <div class="col-md-5" data-aos="fade-right">
+                <h2 class="titulo mb-4">Agenda tu cita</h2>
 
                 <p><strong>📍 Dirección:</strong> Durán, Av. Jaime Nebot Velasco</p>
                 <p><strong>📞 Teléfono:</strong> +593 98 198 1145</p>
-                
 
-                <a href="https://wa.me/593981981145?text=Hola%20Dayana%20%F0%9F%92%85%20quiero%20agendar%20una%20cita%20contigo" target="_blank"
-                   class="btn btn-success mt-3">
-                    Contactar por WhatsApp
-                </a>
+                <!-- FORMULARIO -->
+                <form class="form-reserva mt-4" id="formReserva">
+                    <h5 class="mb-3">Reserva rápida</h5>
+                    <input type="text" id="nombre" placeholder="Tu nombre" required>
+                    <select id="servicio" required>
+                        <option value="">Elige servicio</option>
+                        <option>Manicure Semipermanente</option>
+                        <option>Pedicure Semipermanente</option>
+                        <option>Manicura Rusa</option>
+                        <option>Manicura Caballero</option>
+                        <option>Soft Gel</option>
+                        <option>Poly Gel</option>
+                        <option>Recubrimiento con Gel</option>
+                        <option>Laminado de Cejas</option>
+                        <option>Lifting de Pestañas</option>
+                        <option>Brow Henna</option>
+                        <option>Tratamiento Capilar</option>
+                        <option>Corte de Cabello</option>
+                    </select>
+                    <input type="date" id="fecha" required>
+                    <input type="time" id="hora" required>
+                    <button type="submit" class="btn-rosa w-100">
+                        <i class="bi bi-whatsapp"></i> Reservar por WhatsApp
+                    </button>
+                </form>
 
-                <!-- 💳 TARJETA BANCO -->
-                <div class="banco-box mt-4 text-start">
+                <!-- TARJETA BANCO -->
+                <div class="banco-box mt-4">
                     <h5 class="mb-3">💳 Datos para transferencia</h5>
-
                     <p><strong>Banco:</strong> Banco de Guayaquil</p>
                     <p><strong>Titular:</strong> Dayanna Yumisaca</p>
 
-                    <!-- CUENTA -->
-                    <p class="d-flex align-items-center gap-2">
-                        <strong>Cuenta:</strong> 
+                    <p class="d-flex align-items-center gap-2 flex-wrap">
+                        <strong>Cuenta:</strong>
                         <span id="cuenta">0045878932</span>
-                        <button onclick="copiarTexto('cuenta')" class="btn-copy">📋</button>
+                        <button type="button" onclick="copiarTexto('cuenta', this)" class="btn-copy" aria-label="Copiar cuenta">📋</button>
                     </p>
 
-                    <!-- CÉDULA -->
-                    <p class="d-flex align-items-center gap-2">
-                        <strong>Cédula:</strong> 
+                    <p class="d-flex align-items-center gap-2 flex-wrap">
+                        <strong>Cédula:</strong>
                         <span id="cedula">0951925197</span>
-                        <button onclick="copiarTexto('cedula')" class="btn-copy">📋</button>
+                        <button type="button" onclick="copiarTexto('cedula', this)" class="btn-copy" aria-label="Copiar cédula">📋</button>
                     </p>
-
                 </div>
             </div>
 
-            <!-- MAPA -->
-            <div class="col-md-6 mx-auto mt-4">
+            <div class="col-md-7" data-aos="fade-left">
                 <div class="mapa">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d340.8493978922601!2d-79.83127546373561!3d-2.158569463220649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d0000727d09%3A0x7e6da35b4ed833b9!2sHair%20%26%20Nail%20Salon%20DY!5e0!3m2!1ses-419!2sec!4v1775704649282!5m2!1ses-419!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d340.8493978922601!2d-79.83127546373561!3d-2.158569463220649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d0000727d09%3A0x7e6da35b4ed833b9!2sHair%20%26%20Nail%20Salon%20DY!5e0!3m2!1ses-419!2sec!4v1775704649282!5m2!1ses-419!2sec"
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación del salón"></iframe>
                 </div>
             </div>
 
@@ -607,66 +771,133 @@
     </div>
 </section>
 
-<!-- ⚙️ SCRIPT COPIAR -->
-<script>
-function copiarTexto(id) {
-    const texto = document.getElementById(id).innerText;
-    navigator.clipboard.writeText(texto);
-    alert("Copiado: " + texto);
-}
-</script>
-
-<script>
-function copiarCuenta() {
-    navigator.clipboard.writeText("0045878932");
-    alert("Número de cuenta copiado");
-}
-</script>
-<!-- Footer -->
-<footer class="bg-dark text-white text-center p-3">
-    <p class="mb-1">© 2026 Glamour Nails</p>
+<!-- ================= FOOTER ================= -->
+<footer>
+    <p class="mb-1">© 2026 Glamour Nails · Nail Salon DY</p>
     <small>
-        Desarrollado por 
-        <a href="https://www.instagram.com/jony_steeven02/?utm_source=ig_web_button_share_sheet" target="_blank" class="text-white text-decoration-underline">
+        Desarrollado por
+        <a href="https://www.instagram.com/jony_steeven02/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener">
             Jonathan Yumisaca
         </a>
     </small>
 </footer>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- BOTÓN FLOTANTE WHATSAPP -->
+<!-- ================= WHATSAPP FLOTANTE ================= -->
 <a href="https://wa.me/593981981145?text=Hola%20quiero%20agendar%20una%20cita"
-   class="whatsapp-float"
-   target="_blank">
-
-    <img src="img/boton ws.png" 
-         alt="WhatsApp">
+   class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="bi bi-whatsapp"></i>
 </a>
 
+<!-- ================= BOTÓN VOLVER ARRIBA ================= -->
+<button class="btn-top" id="btnTop" aria-label="Volver arriba">
+    <i class="bi bi-arrow-up"></i>
+</button>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-const items = document.querySelectorAll('.galeria-grid .item');
-const overlay = document.getElementById('overlay');
-
-items.forEach(item => {
-    item.addEventListener('click', () => {
-
-        // quitar otras activas
-        items.forEach(i => i.classList.remove('activa'));
-
-        // activar la tocada
-        item.classList.add('activa');
-        overlay.classList.add('activo');
-    });
+/* =========================================================
+   PRELOADER
+========================================================= */
+window.addEventListener('load', () => {
+    setTimeout(() => document.getElementById('preloader').classList.add('hide'), 500);
 });
 
-// cerrar al tocar fondo
-overlay.addEventListener('click', () => {
-    items.forEach(i => i.classList.remove('activa'));
-    overlay.classList.remove('activo');
+/* =========================================================
+   AOS
+========================================================= */
+AOS.init({
+    duration: 800,
+    once: true,
+    offset: 80,
+    easing: 'ease-out-cubic'
+});
+
+/* =========================================================
+   GLIGHTBOX
+========================================================= */
+GLightbox({
+    selector: '.glightbox',
+    touchNavigation: true,
+    loop: true,
+    zoomable: true,
+    openEffect: 'zoom',
+    closeEffect: 'fade'
+});
+
+/* =========================================================
+   NAVBAR SCROLL
+========================================================= */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+/* =========================================================
+   BOTÓN VOLVER ARRIBA
+========================================================= */
+const btnTop = document.getElementById('btnTop');
+window.addEventListener('scroll', () => {
+    btnTop.classList.toggle('visible', window.scrollY > 500);
+});
+btnTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+/* =========================================================
+   COPIAR TEXTO
+========================================================= */
+function copiarTexto(id, btn) {
+    const texto = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(texto).then(() => {
+        const original = btn.innerText;
+        btn.innerText = '✓';
+        setTimeout(() => btn.innerText = original, 1200);
+    });
+}
+
+/* =========================================================
+   CONTADOR DE ESTADÍSTICAS
+========================================================= */
+const counters = document.querySelectorAll('.stat-num[data-target]');
+const counterObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = +el.dataset.target;
+        let count = 0;
+        const step = target / 60;
+        const timer = setInterval(() => {
+            count += step;
+            if (count >= target) {
+                el.textContent = target + '+';
+                clearInterval(timer);
+            } else {
+                el.textContent = Math.floor(count) + '+';
+            }
+        }, 20);
+        counterObserver.unobserve(el);
+    });
+}, { threshold: 0.5 });
+counters.forEach(c => counterObserver.observe(c));
+
+/* =========================================================
+   FORMULARIO RESERVA → WHATSAPP
+========================================================= */
+document.getElementById('formReserva').addEventListener('submit', e => {
+    e.preventDefault();
+    const nombre = document.getElementById('nombre').value.trim();
+    const servicio = document.getElementById('servicio').value;
+    const fecha = document.getElementById('fecha').value;
+    const hora = document.getElementById('hora').value;
+
+    const msg = `Hola Dayannita 💌%0A%0AQuiero agendar una cita:%0A👤 ${nombre}%0A💅 ${servicio}%0A📅 ${fecha}%0A🕐 ${hora}`;
+    window.open(`https://wa.me/593981981145?text=${msg}`, '_blank');
 });
 </script>
+
 </body>
 </html>
